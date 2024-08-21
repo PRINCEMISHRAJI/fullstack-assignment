@@ -1,5 +1,7 @@
 # React Help Center
-
+### Deployed Link
+(Firstly you need to start the backend due to renders inactivity policy, https://fullstack-assignment-7599.onrender.com/cards/) then deployed link
+https://help-center-102o.onrender.com/
 ![Screenshot (4)](https://github.com/user-attachments/assets/827b26d2-7e88-47a3-b8a1-ff91dea7fa91)
 
 ## Project Overview
