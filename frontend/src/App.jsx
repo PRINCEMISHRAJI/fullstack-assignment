@@ -11,12 +11,12 @@ function App() {
   const [filteredCards, setFilteredCards] = useState([]);
   const [loading, setLoading] = useState(true);
 
-
+  const apiUrl = import.meta.env.VITE_API_URL;
   useEffect(() => {
     // Fetching card data from my backend API
     setLoading(true);
     try {
-      fetch('/cards/')
+      fetch(`${apiUrl}/cards/`)
           .then(res => res.json())
           .then(data => {
             setFilteredCards(data);
@@ -37,7 +37,7 @@ function App() {
 
   const handleSearch = async () => {
     try {
-      const response = await axios(`/cards/${query}`);
+      const response = await axios(`${apiUrl}/cards/${query}`);
       const data = response.data
       Array.isArray(data) ? setFilteredCards(data) : setFilteredCards([data]);
     } catch (error) {
